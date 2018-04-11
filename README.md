@@ -13,6 +13,9 @@ Load the project from VaultCodeTest.xcworkspace.
 
 ### Part 1
 
+When you press the "Reverse String" button in the UI, the app should 
+reverse the user-provided string.
+
 1. Write a string reversal routine.
 2. Using this routine, make the tests in VaultCodeTestTests.m and
    VaultCodeTestUITest.m pass.
@@ -23,7 +26,7 @@ Load the project from VaultCodeTest.xcworkspace.
 When you press the "Load Image" button in the UI, the app should load a cat
 image and display it.
 
-1. Change the constraints on the uiimageview so that it fills the remainder of
+1. Change the constraints on the uiimageview such that it fills the remainder of
    the screen.
 2. Use the AFNetworking library to retrieve an image from http://thecatapi.com/
 3. Load the image into the uiimageview when the button is pressed
