@@ -25,5 +25,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-
+- (IBAction)processString:(id)sender {
+    // Reverse string in textSrc and assign to textDest here
+}
 @end

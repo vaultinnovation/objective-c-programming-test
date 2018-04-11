@@ -11,5 +11,10 @@
 @interface ViewController : UIViewController
 
 
+- (IBAction)processString:(id)sender;
+@property (weak, nonatomic) IBOutlet UITextField *textSrc;
+@property (weak, nonatomic) IBOutlet UITextField *textDest;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+
 @end
 
