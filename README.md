@@ -9,6 +9,8 @@ The tests in this exercise shouldn't take more than a hour or so to complete.
 This project uses cocoapods; please install the dependencies before
 continuing.
 
+Load the project from VaultCodeTest.xcworkspace.
+
 ### Part 1
 
 1. Write a string reversal routine.
