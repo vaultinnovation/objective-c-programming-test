@@ -10,16 +10,18 @@
 #import "ViewController.h"
 
 @interface VaultCodeTestTests : XCTestCase
-
+@property ViewController *vcTest;
 @end
 
 @implementation VaultCodeTestTests
 
 - (void)setUp {
     [super setUp];
+    _vcTest = [[ViewController alloc] init];
 }
 
 - (void)tearDown {
+    _vcTest = nil;
     [super tearDown];
 }
 
@@ -27,7 +29,7 @@
     NSString *src = @"abc123";
     NSString *result = @"321cba";
     
-    NSString *test = @""; // Assign result of string reversal function here
+    NSString *test = [_vcTest reverseString:src];   // Assign result of string reversal function here
     
     XCTAssertTrue([result isEqualToString:test]);
 }
