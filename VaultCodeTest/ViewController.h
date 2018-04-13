@@ -12,6 +12,8 @@
 
 
 - (IBAction)processString:(id)sender;
+- (NSString *)reverseString:(NSString *)input;
+
 @property (weak, nonatomic) IBOutlet UITextField *textSrc;
 @property (weak, nonatomic) IBOutlet UITextField *textDest;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
