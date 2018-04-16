@@ -116,6 +116,35 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		B625BC6C20853A3D006A80BE /* App Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				E1F67E0D2073D43B00DB272D /* AppDelegate.h */,
+				E1F67E0E2073D43B00DB272D /* AppDelegate.m */,
+			);
+			path = "App Delegate";
+			sourceTree = "<group>";
+		};
+		B625BC6D20853A4F006A80BE /* Main Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E1F67E102073D43B00DB272D /* ViewController.h */,
+				E1F67E112073D43B00DB272D /* ViewController.m */,
+				E1F67E132073D43B00DB272D /* Main.storyboard */,
+			);
+			path = "Main Controller";
+			sourceTree = "<group>";
+		};
+		B625BC6E20853A7D006A80BE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E1F67E1C2073D43B00DB272D /* main.m */,
+				E1F67E162073D43B00DB272D /* Assets.xcassets */,
+				E1F67E182073D43B00DB272D /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		E1F67E012073D43B00DB272D = {
 			isa = PBXGroup;
 			children = (
@@ -141,15 +170,10 @@
 		E1F67E0C2073D43B00DB272D /* VaultCodeTest */ = {
 			isa = PBXGroup;
 			children = (
-				E1F67E0D2073D43B00DB272D /* AppDelegate.h */,
-				E1F67E0E2073D43B00DB272D /* AppDelegate.m */,
-				E1F67E102073D43B00DB272D /* ViewController.h */,
-				E1F67E112073D43B00DB272D /* ViewController.m */,
-				E1F67E132073D43B00DB272D /* Main.storyboard */,
-				E1F67E162073D43B00DB272D /* Assets.xcassets */,
-				E1F67E182073D43B00DB272D /* LaunchScreen.storyboard */,
+				B625BC6D20853A4F006A80BE /* Main Controller */,
+				B625BC6C20853A3D006A80BE /* App Delegate */,
+				B625BC6E20853A7D006A80BE /* Supporting Files */,
 				E1F67E1B2073D43B00DB272D /* Info.plist */,
-				E1F67E1C2073D43B00DB272D /* main.m */,
 			);
 			path = VaultCodeTest;
 			sourceTree = "<group>";
