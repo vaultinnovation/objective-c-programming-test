@@ -11,6 +11,7 @@
 @interface ViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UITextField *sourceTextField;
+// FIME: Should destinationTextField be a UILable instead
 @property (weak, nonatomic) IBOutlet UITextField *destinationTextField;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 

@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "NSString+Additions.h"
 
 @interface ViewController ()
 
@@ -15,15 +16,38 @@
 @implementation ViewController
 
 
+
+
+
+#pragma mark - UIViewController Lifecycle
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
 }
 
 
+
+
+
+#pragma mark - IBActions
 - (IBAction)reverseSourceString:(id)sender {
     
     // Reverse string in sourceTextField and assign to textDest here
+    
+    // Test if sourceTextField text has a value
+    if (!self.sourceTextField.hasText) {
+        // TODO: disable 'Reverse String' button if the textField's text property is empty
+        // TODO: test if textField's text is whitespace ... if so return
+        return;
+    }
+    
+    // Reverse the string and set the destinationTextField text property
+    NSString *reverseString = [self.sourceTextField.text copyAndReverse];
+    self.destinationTextField.text = reverseString;
+    
 }
+
+
 
 @end
