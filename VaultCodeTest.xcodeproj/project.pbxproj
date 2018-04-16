@@ -10,6 +10,7 @@
 		037BBE5BE26B2933676E1CCC /* Pods_VaultCodeTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9BD62B015E6C3BBED64C5C1 /* Pods_VaultCodeTestUITests.framework */; };
 		3D2E7A23BF245B1D0B22D6BB /* Pods_VaultCodeTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 701321F46C34A09B00D79A3B /* Pods_VaultCodeTest.framework */; };
 		B20FE6CC0E0381E06A6BB2E0 /* Pods_VaultCodeTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CF8683329772A68845EBC42 /* Pods_VaultCodeTestTests.framework */; };
+		B625BCB020853B83006A80BE /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = B625BCAF20853B83006A80BE /* NSString+Additions.m */; };
 		E1F67E0F2073D43B00DB272D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E1F67E0E2073D43B00DB272D /* AppDelegate.m */; };
 		E1F67E122073D43B00DB272D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1F67E112073D43B00DB272D /* ViewController.m */; };
 		E1F67E152073D43B00DB272D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1F67E132073D43B00DB272D /* Main.storyboard */; };
@@ -44,6 +45,8 @@
 		6B8DDEA8047F2FF026E775C8 /* Pods-VaultCodeTestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VaultCodeTestUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VaultCodeTestUITests/Pods-VaultCodeTestUITests.release.xcconfig"; sourceTree = "<group>"; };
 		701321F46C34A09B00D79A3B /* Pods_VaultCodeTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VaultCodeTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E6102F9EBC3048DE3B29CB5 /* Pods-VaultCodeTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VaultCodeTestTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VaultCodeTestTests/Pods-VaultCodeTestTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B625BCAE20853B83006A80BE /* NSString+Additions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Additions.h"; sourceTree = "<group>"; };
+		B625BCAF20853B83006A80BE /* NSString+Additions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Additions.m"; sourceTree = "<group>"; };
 		D1782686EB82303169FAD670 /* Pods-VaultCodeTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VaultCodeTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VaultCodeTest/Pods-VaultCodeTest.debug.xcconfig"; sourceTree = "<group>"; };
 		D9BD62B015E6C3BBED64C5C1 /* Pods_VaultCodeTestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VaultCodeTestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA4615EDF00E389EDBC8F4D7 /* Pods-VaultCodeTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VaultCodeTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-VaultCodeTest/Pods-VaultCodeTest.release.xcconfig"; sourceTree = "<group>"; };
@@ -145,6 +148,15 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		B625BCAD20853B5E006A80BE /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				B625BCAE20853B83006A80BE /* NSString+Additions.h */,
+				B625BCAF20853B83006A80BE /* NSString+Additions.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
 		E1F67E012073D43B00DB272D = {
 			isa = PBXGroup;
 			children = (
@@ -170,6 +182,7 @@
 		E1F67E0C2073D43B00DB272D /* VaultCodeTest */ = {
 			isa = PBXGroup;
 			children = (
+				B625BCAD20853B5E006A80BE /* Categories */,
 				B625BC6D20853A4F006A80BE /* Main Controller */,
 				B625BC6C20853A3D006A80BE /* App Delegate */,
 				B625BC6E20853A7D006A80BE /* Supporting Files */,
@@ -262,7 +275,7 @@
 		E1F67E022073D43B00DB272D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = Vault;
 				TargetAttributes = {
 					E1F67E092073D43B00DB272D = {
@@ -409,6 +422,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1F67E122073D43B00DB272D /* ViewController.m in Sources */,
+				B625BCB020853B83006A80BE /* NSString+Additions.m in Sources */,
 				E1F67E1D2073D43B00DB272D /* main.m in Sources */,
 				E1F67E0F2073D43B00DB272D /* AppDelegate.m in Sources */,
 			);
@@ -479,6 +493,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -486,6 +501,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -534,6 +550,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -541,6 +558,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
