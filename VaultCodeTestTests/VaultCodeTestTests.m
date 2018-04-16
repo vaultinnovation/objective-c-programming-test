@@ -27,9 +27,12 @@
     NSString *src = @"abc123";
     NSString *result = @"321cba";
     
-    NSString *test = @""; // Assign result of string reversal function here
+    ViewController *controller = [ViewController new];
     
+    NSString *test = [controller reverseString:src]; // Assign result of string reversal function here
+
     XCTAssertTrue([result isEqualToString:test]);
 }
 
 @end
+
