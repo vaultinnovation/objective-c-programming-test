@@ -14,18 +14,16 @@
 
 @implementation ViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)reverseSourceString:(id)sender {
+    
+    // Reverse string in sourceTextField and assign to textDest here
 }
 
-- (IBAction)processString:(id)sender {
-    // Reverse string in textSrc and assign to textDest here
-}
 @end
