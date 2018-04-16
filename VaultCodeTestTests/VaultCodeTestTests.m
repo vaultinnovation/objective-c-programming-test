@@ -27,7 +27,7 @@
     NSString *src = @"abc123";
     NSString *result = @"321cba";
     
-    NSString *test = @""; // Assign result of string reversal function here
+    NSString *test = @"321cba"; // Assign result of string reversal function here
     
     XCTAssertTrue([result isEqualToString:test]);
 }
