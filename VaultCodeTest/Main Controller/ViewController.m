@@ -8,8 +8,11 @@
 
 #import "ViewController.h"
 #import "NSString+Additions.h"
+@import AFNetworking;
 
 @interface ViewController ()
+
+- (void)loadImageWithSessionDataTask;
 
 @end
 
@@ -48,6 +51,48 @@
     
 }
 
+- (IBAction)loadImage:(id)sender {
+    
+    [self loadImageWithSessionDataTask];
+}
+
+
+
+
+
+
+#pragma mark - Networking
+
+- (void)loadImageWithSessionDataTask {
+    
+    
+    // I added this method to test image loading .. just for fun
+    NSURL *url = [[NSURL alloc] initWithString:@"http://thecatapi.com/api/images/get?format=src&type=jpg"];
+    
+    UIApplication.sharedApplication.networkActivityIndicatorVisible = YES;
+    NSURLSessionDataTask *task = [[NSURLSession sharedSession] dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        
+        if(error != nil) {
+            NSLog(@"error :: %@",[error localizedDescription]);
+        }
+        
+        NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
+        NSLog(@"response status code: %ld", (long)[httpResponse statusCode]);
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if([httpResponse statusCode] == 200 && data != nil) {
+                UIImage *image = [[UIImage alloc] initWithData: data];
+                self.imageView.image = image;
+            }
+            UIApplication.sharedApplication.networkActivityIndicatorVisible = NO;
+           
+        });
+        
+    }];
+    
+    [task resume];
+    
+}
 
 
 @end
