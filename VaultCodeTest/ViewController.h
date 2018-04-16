@@ -12,9 +12,18 @@
 
 
 - (IBAction)processString:(id)sender;
+- (IBAction)getCat;
+- (NSString *)reverseString:(NSString *)string;
+
 @property (weak, nonatomic) IBOutlet UITextField *textSrc;
 @property (weak, nonatomic) IBOutlet UITextField *textDest;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *imageViewBottomConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *imageViewLeadingConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *imageViewTrailingConstraint;
+
+
 @end
+
 
