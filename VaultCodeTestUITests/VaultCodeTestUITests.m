@@ -28,6 +28,7 @@
 }
 
 - (void)testReverseString {
+    
     [[self.app.textFields elementBoundByIndex:0] tap];
     [[self.app.textFields elementBoundByIndex:0] typeText:@"abc"];
     [[self.app.buttons elementBoundByIndex:0] tap];
@@ -36,8 +37,10 @@
 }
 
 - (void)testLoadImageButton {
+    
     [[self.app.buttons elementBoundByIndex:1] tap];
     XCTAssertTrue([[self.app.images element] exists]);
+    
 }
 
 @end
