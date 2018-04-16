@@ -71,10 +71,11 @@
     // Create the url
     NSURL *url = [[NSURL alloc] initWithString:@"http://thecatapi.com/api/images/get?format=src&type=jpg"];
     
-    // Create the AFImageDownloader amd request
+    // Create the AFImageDownloader and request
     AFImageDownloader *downloader = [AFImageDownloader new];
     NSURLRequest *request = [NSURLRequest requestWithURL: url];
     
+    // Load the image
     UIApplication.sharedApplication.networkActivityIndicatorVisible = YES;
     [downloader downloadImageForURLRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *responseObject) {
         
