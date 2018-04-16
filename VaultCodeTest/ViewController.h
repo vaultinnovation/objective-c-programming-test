@@ -7,14 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AFNetworking.h>
+#import <AFImageDownloader.h>
 
-@interface ViewController : UIViewController
+
+@interface ViewController : UIViewController <NSXMLParserDelegate>
 
 
 - (IBAction)processString:(id)sender;
 @property (weak, nonatomic) IBOutlet UITextField *textSrc;
 @property (weak, nonatomic) IBOutlet UITextField *textDest;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (strong, nonatomic) NSMutableString *xmlString;
+@property (nonatomic) BOOL captureCharacters;
 
 @end
 
