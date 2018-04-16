@@ -12,6 +12,7 @@
 
 @interface ViewController ()
 
+- (void)loadRemoteImage;
 - (void)loadImageWithSessionDataTask;
 
 @end
@@ -53,7 +54,9 @@
 
 - (IBAction)loadImage:(id)sender {
     
-    [self loadImageWithSessionDataTask];
+    [self loadRemoteImage];
+    //[self loadImageWithSessionDataTask];
+    
 }
 
 
@@ -62,6 +65,27 @@
 
 
 #pragma mark - Networking
+
+- (void)loadRemoteImage {
+    
+    // Create the url
+    NSURL *url = [[NSURL alloc] initWithString:@"http://thecatapi.com/api/images/get?format=src&type=jpg"];
+    
+    // Create the AFImageDownloader amd request
+    AFImageDownloader *downloader = [AFImageDownloader new];
+    NSURLRequest *request = [NSURLRequest requestWithURL: url];
+    
+    UIApplication.sharedApplication.networkActivityIndicatorVisible = YES;
+    [downloader downloadImageForURLRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *responseObject) {
+        
+        self.imageView.image = responseObject;
+        UIApplication.sharedApplication.networkActivityIndicatorVisible = NO;
+        
+    } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {
+        NSLog(@"Error downloading image :: %@",[error localizedDescription]);
+        UIApplication.sharedApplication.networkActivityIndicatorVisible = NO;
+    }];
+}
 
 - (void)loadImageWithSessionDataTask {
     
