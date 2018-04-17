@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11BB01302086A0CE0073C1D1 /* NSString+Remove.m in Sources */ = {isa = PBXBuildFile; fileRef = 11BB012F2086A0CE0073C1D1 /* NSString+Remove.m */; };
 		7F5A90D2C4103D3206133DB0 /* libPods-VaultCodeTestTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A89628BEAD9BA5B75ABD1B /* libPods-VaultCodeTestTests.a */; };
 		E1F67E0F2073D43B00DB272D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E1F67E0E2073D43B00DB272D /* AppDelegate.m */; };
 		E1F67E122073D43B00DB272D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1F67E112073D43B00DB272D /* ViewController.m */; };
@@ -39,6 +40,8 @@
 /* Begin PBXFileReference section */
 		064B29C7A8542B1A25225FC4 /* Pods-VaultCodeTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VaultCodeTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VaultCodeTest/Pods-VaultCodeTest.debug.xcconfig"; sourceTree = "<group>"; };
 		0F93E4D7F0DF9446E8F1335A /* Pods-VaultCodeTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VaultCodeTestTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VaultCodeTestTests/Pods-VaultCodeTestTests.debug.xcconfig"; sourceTree = "<group>"; };
+		11BB012E2086A0CE0073C1D1 /* NSString+Remove.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NSString+Remove.h"; path = "Extensions/NSString+Remove.h"; sourceTree = "<group>"; };
+		11BB012F2086A0CE0073C1D1 /* NSString+Remove.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "NSString+Remove.m"; path = "Extensions/NSString+Remove.m"; sourceTree = "<group>"; };
 		213FE0C287ACBAD6BABFD745 /* Pods-VaultCodeTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VaultCodeTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-VaultCodeTest/Pods-VaultCodeTest.release.xcconfig"; sourceTree = "<group>"; };
 		62A2E7A33FF0E66DCF6E23E6 /* libPods-VaultCodeTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VaultCodeTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1F67E0A2073D43B00DB272D /* VaultCodeTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VaultCodeTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -137,6 +140,8 @@
 				E1F67E0E2073D43B00DB272D /* AppDelegate.m */,
 				E1F67E102073D43B00DB272D /* ViewController.h */,
 				E1F67E112073D43B00DB272D /* ViewController.m */,
+				11BB012E2086A0CE0073C1D1 /* NSString+Remove.h */,
+				11BB012F2086A0CE0073C1D1 /* NSString+Remove.m */,
 				E1F67E132073D43B00DB272D /* Main.storyboard */,
 				E1F67E162073D43B00DB272D /* Assets.xcassets */,
 				E1F67E182073D43B00DB272D /* LaunchScreen.storyboard */,
@@ -175,8 +180,6 @@
 				E1F67E062073D43B00DB272D /* Sources */,
 				E1F67E072073D43B00DB272D /* Frameworks */,
 				E1F67E082073D43B00DB272D /* Resources */,
-				6FE68FF0FE47869B1519C47A /* [CP] Embed Pods Frameworks */,
-				09E4CF660F01B99F0FBB01FD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -195,8 +198,6 @@
 				E1F67E1E2073D43B00DB272D /* Sources */,
 				E1F67E1F2073D43B00DB272D /* Frameworks */,
 				E1F67E202073D43B00DB272D /* Resources */,
-				9044756752E26EEC25B06432 /* [CP] Embed Pods Frameworks */,
-				FDC085E49CCF080A17244F77 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -299,21 +300,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		09E4CF660F01B99F0FBB01FD /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VaultCodeTest/Pods-VaultCodeTest-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		3F42EDF1754853F6B0E04A1F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -330,36 +316,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6FE68FF0FE47869B1519C47A /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VaultCodeTest/Pods-VaultCodeTest-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9044756752E26EEC25B06432 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VaultCodeTestTests/Pods-VaultCodeTestTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B82348C9036591DF23B53339 /* [CP] Check Pods Manifest.lock */ = {
@@ -380,21 +336,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		FDC085E49CCF080A17244F77 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VaultCodeTestTests/Pods-VaultCodeTestTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -403,6 +344,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1F67E122073D43B00DB272D /* ViewController.m in Sources */,
+				11BB01302086A0CE0073C1D1 /* NSString+Remove.m in Sources */,
 				E1F67E1D2073D43B00DB272D /* main.m in Sources */,
 				E1F67E0F2073D43B00DB272D /* AppDelegate.m in Sources */,
 			);

@@ -7,9 +7,11 @@
 //
 
 #import "ViewController.h"
+#import <AFNetworking/AFNetworking.h>
+#import <AFNetworking/AFImageDownloader.h>
+#import "NSString+Remove.h"
 
 @interface ViewController ()
-
 @end
 
 @implementation ViewController
@@ -27,5 +29,26 @@
 
 - (IBAction)processString:(id)sender {
     // Reverse string in textSrc and assign to textDest here
+    
+    [_textDest setText:[[_textSrc text] reverse]];
+}
+
+- (IBAction)loadImageAction:(id)sender {
+    
+    AFImageDownloader* imageDownloader = [[AFImageDownloader alloc] init];
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString: @"https://thecatapi.com/api/images/get?format=src&type=png"]];
+    
+    [imageDownloader downloadImageForURLRequest:request success:^(NSURLRequest * _Nonnull request, NSHTTPURLResponse * _Nullable response, UIImage * _Nonnull responseObject) {
+        NSLog(@"Success: Image downloaded.");
+        CGRect lastFrame = [_loadImageButton frame];
+        CGRect viewFrame = [[self view] frame];
+        CGFloat offset = lastFrame.size.height;
+        CGRect imageFrame = CGRectMake(viewFrame.origin.x, lastFrame.origin.y + offset, viewFrame.size.width, viewFrame.size.height - lastFrame.origin.y - offset);
+        [_imageView setFrame: imageFrame];
+        [_imageView setImage: responseObject];
+        
+    } failure:^(NSURLRequest * _Nonnull request, NSHTTPURLResponse * _Nullable response, NSError * _Nonnull error) {
+        NSLog(@"Failed to download image.");
+    }];
 }
 @end
