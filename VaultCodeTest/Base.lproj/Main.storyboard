@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -36,8 +36,11 @@
                                 <rect key="frame" x="132" y="130" width="111" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Load Image"/>
+                                <connections>
+                                    <action selector="loadImageAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4mc-2n-k59"/>
+                                </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YKv-D3-Q5U">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YKv-D3-Q5U">
                                 <rect key="frame" x="67" y="168" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -46,7 +49,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Reverse String"/>
                                 <connections>
-                                    <action selector="processString:" destination="BYZ-38-t0r" eventType="touchDown" id="J31-UV-oC1"/>
+                                    <action selector="processString:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hC5-Id-AKN"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -55,6 +58,7 @@
                     </view>
                     <connections>
                         <outlet property="imageView" destination="YKv-D3-Q5U" id="cUV-91-oSj"/>
+                        <outlet property="loadImageButton" destination="K2H-H9-Kdq" id="ays-9c-A51"/>
                         <outlet property="textDest" destination="6a8-QR-JdA" id="9vJ-pI-3RN"/>
                         <outlet property="textSrc" destination="KHX-dg-iEW" id="f8j-cF-AVr"/>
                     </connections>
