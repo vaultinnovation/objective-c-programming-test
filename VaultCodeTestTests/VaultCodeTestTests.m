@@ -8,6 +8,7 @@
 
 #import <XCTest/XCTest.h>
 #import "ViewController.h"
+#import "NSString+Remove.h"
 
 @interface VaultCodeTestTests : XCTestCase
 
@@ -27,7 +28,7 @@
     NSString *src = @"abc123";
     NSString *result = @"321cba";
     
-    NSString *test = @""; // Assign result of string reversal function here
+    NSString *test = [src reverse]; // Assign result of string reversal function here
     
     XCTAssertTrue([result isEqualToString:test]);
 }

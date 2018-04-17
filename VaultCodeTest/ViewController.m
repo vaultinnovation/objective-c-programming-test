@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import <AFNetworking/AFNetworking.h>
 #import <AFNetworking/AFImageDownloader.h>
+#import "NSString+Remove.h"
 
 @interface ViewController ()
 @end
@@ -29,15 +30,7 @@
 - (IBAction)processString:(id)sender {
     // Reverse string in textSrc and assign to textDest here
     
-    NSMutableString *textReversedString = [[NSMutableString alloc] init];
-    
-    [[_textSrc text] enumerateSubstringsInRange:NSMakeRange(0,[[_textSrc text] length])
-                                       options:(NSStringEnumerationReverse | NSStringEnumerationByComposedCharacterSequences)
-                                    usingBlock:^(NSString *substring, NSRange substringRange, NSRange enclosingRange, BOOL *stop) {
-                                        [textReversedString appendString:substring];
-    }];
-    
-    [_textDest setText:textReversedString];
+    [_textDest setText:[[_textSrc text] reverse]];
 }
 
 - (IBAction)loadImageAction:(id)sender {
